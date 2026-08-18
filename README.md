@@ -1,4 +1,4 @@
-![Proje banner görseli](images/anki_ceviri_otomasyonu_banner.jpg)
+![Proje banner görseli](images/anki_ceviri_otomasyonu_banner.png)
 
 <div align="center">
    <img src="https://img.shields.io/badge/Python-3.8%2B-blue.svg" alt="Python">
