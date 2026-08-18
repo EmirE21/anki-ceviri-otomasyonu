@@ -1,5 +1,4 @@
-<img src="images/anki_ceviri_otomasyonu_banner.jpg" alt="Proje banner görseli" style="border-radius: 20px; width: 100%; max-width: 800px;">
-
+![Proje banner görseli](images/anki_ceviri_otomasyonu_banner.jpg)
 <div align="center">
    <img src="https://img.shields.io/badge/Python-3.8%2B-blue.svg" alt="Python">
    <img src="https://img.shields.io/badge/Gemini-API-orange.svg" alt="Gemini API">
