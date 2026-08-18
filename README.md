@@ -1,4 +1,5 @@
 ![Proje banner görseli](images/anki_ceviri_otomasyonu_banner.jpg)
+
 <div align="center">
    <img src="https://img.shields.io/badge/Python-3.8%2B-blue.svg" alt="Python">
    <img src="https://img.shields.io/badge/Gemini-API-orange.svg" alt="Gemini API">
@@ -95,9 +96,27 @@ Araç, girdi olarak bir CSV dosyası alır ve işlediği her kelime için Excel 
    TOPLAM_KELIME_LIMITI=500
    ```
 
+#### Değiştirilebilecek Ayarlar
+
+| Kategori     | Değişken                | Açıklama                                         | Varsayılan       | Değiştirilebilir mi? |
+| ------------ | ----------------------- | ------------------------------------------------ | ---------------- | -------------------- |
+| **API**      | `GEMINI_API_KEY`        | Google Gemini API anahtarınız                    | **(Boş)**        | ✅ **Zorunlu**       |
+| **Limit**    | `GEMINI_RPM_LIMIT`      | Dakikada maksimum API isteği                     | 15               | ✅ Evet              |
+| **Limit**    | `GEMINI_RPD_LIMIT`      | Günde maksimum API isteği                        | 1500             | ✅ Evet              |
+| **Model**    | `GEMINI_MODEL_NAME`     | Kullanılacak Gemini modeli                       | gemini-3.6-flash | ✅ Evet              |
+| **Deneme**   | `MAX_DENEME`            | API hatasında maksimum deneme sayısı             | 5                | ✅ Evet              |
+| **Bekleme**  | `BASE_BEKLEME`          | Hata durumunda başlangıç bekleme süresi (saniye) | 65               | ✅ Evet              |
+| **Mola**     | `PROAKTIF_MOLA_ARALIGI` | Kaç kelimede bir kısa mola verileceği            | 10               | ✅ Evet              |
+| **Mola**     | `PROAKTIF_MOLA_SURESI`  | Kısa mola süresi (saniye)                        | 75               | ✅ Evet              |
+| **Mola**     | `UZUN_MOLA_ARALIGI`     | Kaç kelimede bir uzun mola verileceği            | 30               | ✅ Evet              |
+| **Mola**     | `UZUN_MOLA_SURESI`      | Uzun mola süresi (saniye)                        | 120              | ✅ Evet              |
+| **Gecikme**  | `MIN_GECIKME`           | İnsansı gecikme minimum süre (saniye)            | 5.0              | ✅ Evet              |
+| **Gecikme**  | `MAX_GECIKME`           | İnsansı gecikme maksimum süre (saniye)           | 7.5              | ✅ Evet              |
+| **Güvenlik** | `TOPLAM_KELIME_LIMITI`  | Tek seferde işlenecek maksimum kelime            | 500              | ✅ Evet              |
+
 #### Önemli Uyarılar
 
-##### 1. .env Dosyasını Paylaşmayın!
+##### 1. .env Dosyasını Paylaşmayın
 
 - .env dosyası API anahtarınızı içerir. Bu dosyayı kimseyle paylaşmayın.
 
@@ -105,7 +124,7 @@ Araç, girdi olarak bir CSV dosyası alır ve işlediği her kelime için Excel 
 
 - Eğer yanlışlıkla paylaştıysanız, Google AI Studio'dan API anahtarınızı iptal edip yeni bir tane oluşturun.
 
-##### 2. .env Dosyasını GitHub'a Yüklemeyin!
+##### 2. .env Dosyasını GitHub'a Yüklemeyin
 
 - .env dosyasını asla GitHub'a yüklemeyin.
 
