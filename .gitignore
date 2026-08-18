@@ -1,0 +1,29 @@
+# Gizli dosyalar
+.env
+*.log
+usage.log
+
+# Çıktı dosyaları
+anki_icin_hazir.csv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
