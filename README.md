@@ -73,28 +73,28 @@ Araç, girdi olarak bir CSV dosyası alır ve işlediği her kelime için Excel 
 
 7. Ctrl + S ile kaydedin.
 
-   ```env
-   # Google Gemini API Ayarları
-   GEMINI_API_KEY=BURAYA_API_ANAHTARINIZI_YAPISTIRIN
+```env
+# Google Gemini API Ayarları
+GEMINI_API_KEY=BURAYA_API_ANAHTARINIZI_YAPISTIRIN
 
-   # API Limitleri (Google'ın güncel limitlerine göre düzenleyin)
-   GEMINI_RPM_LIMIT=15
-   GEMINI_RPD_LIMIT=1500
+# API Limitleri (Google'ın güncel limitlerine göre düzenleyin)
+GEMINI_RPM_LIMIT=15
+GEMINI_RPD_LIMIT=1500
 
-   # Model Ayarları
-   GEMINI_MODEL_NAME=gemini-3.6-flash
+# Model Ayarları
+GEMINI_MODEL_NAME=gemini-3.6-flash
 
-   # Proje Ayarları
-   MAX_DENEME=5
-   BASE_BEKLEME=65
-   PROAKTIF_MOLA_ARALIGI=10
-   PROAKTIF_MOLA_SURESI=75
-   UZUN_MOLA_ARALIGI=30
-   UZUN_MOLA_SURESI=120
-   MIN_GECIKME=5.0
-   MAX_GECIKME=7.5
-   TOPLAM_KELIME_LIMITI=500
-   ```
+# Proje Ayarları
+MAX_DENEME=5
+BASE_BEKLEME=65
+PROAKTIF_MOLA_ARALIGI=10
+PROAKTIF_MOLA_SURESI=75
+UZUN_MOLA_ARALIGI=30
+UZUN_MOLA_SURESI=120
+MIN_GECIKME=5.0
+MAX_GECIKME=7.5
+TOPLAM_KELIME_LIMITI=500
+```
 
 #### Değiştirilebilecek Ayarlar
 
