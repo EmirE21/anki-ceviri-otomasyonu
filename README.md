@@ -1,22 +1,22 @@
-# Anki İçin Çeviri Otomasyonu
+# Anki Çeviri Otomasyonu
 
-İngilizce kelimeleri, verilen cümle bağlamına göre analiz ederek Anki flashcard uygulamasına doğrudan import edilebilecek CSV dosyasına dönüştüren bir araçtır.
+CSV dosya formatında verilen İngilizce kelimeleri, dosyada yer alan cümlelerdeki bağlamlarına göre Gemini API yardımı ile Türkçe diline çevirip sözlük anlamını verilen CSV dosyasına işleyen bir otomasyondur.
 
 ## Başlangıç
 
 ### Gereksinimler
 
-- Python 3.8 veya üzeri
+- Python 3.8 veya üzeri (ücretsiz)
 
 - Google Gemini API anahtarı (ücretsiz)
 
 ### Kurulum Adımları
 
-1. Projeyi indirin veya kopyalayın.
+1. Projeyi indirin veya klonlayın.
 
-2. Terminalde proje klasörüne gidin.
+2. Terminal üzerinden proje klasörüne gidin.
 
-3. Bağımlılıkları yükleyin.
+3. Gereklilikleri yükleyin.
 
    ```bash
    pip install -r requirements.txt
@@ -33,6 +33,7 @@
    ```text
    kelime;;kelimenin geçtiği ingilizce cümle
    ```
+**Not:** CSV dosyasına bu formatta yazmak zor olabilir. Excel üzerinden; A sütununda İngilizce keimeler, C sütununda kelimenin geçtiği İngilizce cümle yer alacak şekilde doldurup dosyayı CSV (UTF-8) formatında farklı kaydederseniz aynı sonuca ulaşabilirsiniz.
 
 6. Çalıştırın.
 
@@ -42,11 +43,11 @@
 
 ## Kullanım
 
-Araç, girdi olarak bir CSV dosyası alır ve işlediği her kelime için B sütununa Cambridge sözlük tarzında Türkçe anlam ve açıklama ekler.
+Araç, girdi olarak bir CSV dosyası alır ve işlediği her kelime için B sütununa Cambridge Dictionary sitesinde yer alan tanım tarzında Türkçe anlam ve açıklama ekler.
 
 ### Çıktı Dosyası
 
-`anki_icin_hazir.csv` adıyla oluşur. Anki'de `;` (noktalı virgül) ayracı ile import edilebilir.
+`anki_icin_hazir.csv` adıyla oluşur. Anki'de `;` (noktalı virgül) ayracı ile yüklenebilir.
 
 ### Kota Sorgulama
 
@@ -64,7 +65,7 @@ python anki_otomasyon.py --config
 
 Sistem, Google'ın ücretsiz API kullanım limitleri çerçevesinde tasarlanmıştır: Dakikada 15 istek, günde 1500 istek.
 
-Bu nedenle en sağlıklı kullanım şekli, işlemi tek bir seansta değil güne yayarak yapmaktır. Örneğin sabah ve akşam olmak üzere iki ayrı seansta kelimeleri işleyebilirsiniz. Bu yöntemle hem limitlere takılmadan ilerleyebilir hem de sistemin sizi yavaşlatmasını engelleyebilirsiniz.
+Bu nedenle en sağlıklı kullanım şekli, işlemi tek seferde değil güne yayarak yapmaktır. Örneğin sabah ve akşam olmak üzere iki ayrı seansta kelimeleri işleyebilirsiniz. Bu yöntemle hem limitlere takılmadan ilerleyebilir hem de sistemin sizi yavaşlatmasını engelleyebilirsiniz.
 
 Araç, her 10 kelimede bir 75 saniye, her 30 kelimede bir ise 120 saniye mola verir. Bu, Google tarafından hızlı istek atan bot olarak algılanmamanız için alınmış bir önlemdir. Bu molalar sistemin işleyişinin bir parçasıdır.
 
